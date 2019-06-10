@@ -10,26 +10,6 @@
       "browserName": "chrome",
       "maxInstances": 5,
       "seleniumProtocol": "WebDriver"
-    },
-    {
-      "browserName": "MicrosoftEdge",
-      "platform": "WINDOWS",
-      "maxInstances": 5,
-      "seleniumProtocol": "WebDriver"
-    },
-    {
-      "browserName": "internet explorer",
-      "platform": "WINDOWS",
-      "maxInstances": 5,
-      "requireWindowFocus": true,
-      "seleniumProtocol": "WebDriver"
-    },
-    {
-      "browserName": "safari",
-      "technologyPreview": false,
-      "platform": "MAC",
-      "maxInstances": 5,
-      "seleniumProtocol": "WebDriver"
     }
   ],
   "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",

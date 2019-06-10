@@ -19,3 +19,14 @@ dependencies {
     testCompile 'io.cucumber:cucumber-java8:4.3.1'
     testCompile 'io.cucumber:cucumber-junit:4.3.1'
 }
+
+sourceSets {
+    test {
+        java {
+            srcDir 'src/test/java'
+        }
+        resources {
+            srcDir 'src/test/resources'
+        }
+    }
+}
