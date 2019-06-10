@@ -15,7 +15,7 @@ public class LoginPage extends PageObject {
     @FindBy(css = "input[type='password']")
     private WebElement passwordField;
 
-    @FindBy(css = "form[action$='sign-in']")
+    @FindBy(xpath = "//form[@action='/sign-in']")
     private WebElement loginForm;
 
     private LoginPage(WebDriver driver) {
