@@ -13,12 +13,12 @@ public class SettingsSteps {
         this.world = world;
     }
 
-    @And("I select the Language {string}")
+    @And("I select the language {string}")
     public void iSelectTheLanguage(String language) {
         world.settingsPage = world.settingsPage.selectLanguage(language);
     }
 
-    @And("I submit the Settings form")
+    @And("I submit the settings form")
     public void iSubmitTheSettingsForm() {
         world.settingsPage = world.settingsPage.submit();
     }

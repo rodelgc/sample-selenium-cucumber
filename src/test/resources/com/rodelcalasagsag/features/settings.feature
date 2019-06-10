@@ -9,8 +9,8 @@ Feature: Change settings
 
   Scenario Outline:  Change Language settings
     When I navigate to the settings page
-    And I select the Language "<language_value>"
-    And I submit the Settings form
+    And I select the language "<language_value>"
+    And I submit the settings form
     Then I should see the message "<success_message>"
 
     Examples:
