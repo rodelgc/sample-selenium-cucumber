@@ -15,6 +15,7 @@ public class Config {
   public static final String PASSWORD = (String) config.get("password");
   public static final long DEFAULT_EXPLICIT_WAIT_TIME =
       Long.parseLong((String) config.get("defaultExplicitWait"));
+  public static final String PLATFORM = (String) config.get("platform");
 
   private static JSONObject getConfigJSON() {
     JSONParser parser = new JSONParser();

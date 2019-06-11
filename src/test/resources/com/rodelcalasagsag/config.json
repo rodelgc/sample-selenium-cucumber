@@ -1,7 +1,8 @@
 {
   "username": "rc-assessment",
   "password": "E3P5#n6t",
-  "browserName": "firefox",
+  "browserName": "chrome",
+  "platform": "ANY",
   "hubURL": "http://localhost:4444/wd/hub",
   "defaultExplicitWait": "10"
 }

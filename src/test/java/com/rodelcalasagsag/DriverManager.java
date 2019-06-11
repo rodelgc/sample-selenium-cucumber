@@ -17,7 +17,7 @@ import static org.hamcrest.Matchers.greaterThan;
 public class DriverManager {
   public static RemoteWebDriver createDriver() throws MalformedURLException {
     DesiredCapabilities capabilities = new DesiredCapabilities();
-    capabilities.setPlatform(Platform.ANY);
+    capabilities.setPlatform(Platform.valueOf(Config.PLATFORM));
     capabilities.setBrowserName(Config.BROWSER_NAME);
     RemoteWebDriver driver = new RemoteWebDriver(new URL(Config.HUB_URL), capabilities);
     driver.setFileDetector(new LocalFileDetector());
