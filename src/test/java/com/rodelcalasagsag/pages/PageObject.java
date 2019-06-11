@@ -7,25 +7,25 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PageObject {
-    protected WebDriver driver;
-    private WebDriverWait wait;
+  protected WebDriver driver;
+  private WebDriverWait wait;
 
-    public PageObject(WebDriver driver) {
-        this.driver = driver;
-        wait = new WebDriverWait(driver, 10);
-    }
+  public PageObject(WebDriver driver) {
+    this.driver = driver;
+    wait = new WebDriverWait(driver, 10);
+  }
 
-    protected void type(WebElement e, String s) {
-        e.clear();
-        e.sendKeys(s);
-    }
+  protected void type(WebElement e, String s) {
+    e.clear();
+    e.sendKeys(s);
+  }
 
-    protected WebElement findElement(WebElement e) {
-        return wait.until(ExpectedConditions.visibilityOf(e));
-    }
+  protected WebElement waitElement(WebElement e) {
+    return wait.until(ExpectedConditions.visibilityOf(e));
+  }
 
-    public boolean showsMessage(String msg) {
-        By byXPath = By.xpath("//*[contains(text(),'" + msg + "')]");
-        return driver.findElement(byXPath).isDisplayed();
-    }
+  public boolean showsMessage(String msg) {
+    By byXPath = By.xpath("//*[contains(text(),'" + msg + "')]");
+    return driver.findElement(byXPath).isDisplayed();
+  }
 }

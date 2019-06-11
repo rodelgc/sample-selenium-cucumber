@@ -1,8 +1,8 @@
-@settings
+@account @settings
 Feature: Change settings
   As a registered user
-  I need to go to the Settings page
-  So that I can change my Language, Timezone and Password settings.
+  I need to submit new details on the Settings page
+  So that I can change my account settings
 
   Background:
     Given I am logged in

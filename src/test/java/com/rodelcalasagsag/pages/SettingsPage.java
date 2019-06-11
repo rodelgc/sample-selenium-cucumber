@@ -8,26 +8,26 @@ import org.openqa.selenium.support.ui.Select;
 
 public class SettingsPage extends PageObject {
 
-    @FindBy(id = "form-settings")
-    private WebElement formSettings;
+  @FindBy(id = "form-settings")
+  private WebElement formSettings;
 
-    @FindBy(css = "select[name='langcode']")
-    private WebElement langDropDown;
+  @FindBy(css = "select[name='langcode']")
+  private WebElement langDropDown;
 
-    public SettingsPage(WebDriver driver) {
-        super(driver);
-        PageFactory.initElements(driver, this);
-        super.findElement(formSettings);
-    }
+  public SettingsPage(WebDriver driver) {
+    super(driver);
+    PageFactory.initElements(driver, this);
+    super.waitElement(formSettings);
+  }
 
-    public SettingsPage selectLanguage(String language) {
-        Select langSelect = new Select(langDropDown);
-        langSelect.selectByVisibleText(language);
-        return this;
-    }
+  public SettingsPage selectLanguage(String language) {
+    Select langSelect = new Select(langDropDown);
+    langSelect.selectByVisibleText(language);
+    return this;
+  }
 
-    public SettingsPage submit() {
-        formSettings.submit();
-        return new SettingsPage(driver);
-    }
+  public SettingsPage submit() {
+    formSettings.submit();
+    return new SettingsPage(driver);
+  }
 }

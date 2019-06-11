@@ -7,23 +7,23 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SecureYourAccountModal extends PageObject {
 
-    @FindBy(css = "div.card.dib.TFAcard.authenticator")
-    private WebElement authenticatorCard;
+  @FindBy(css = "div.card.dib.TFAcard.authenticator")
+  private WebElement authenticatorCard;
 
-    @FindBy(css = "button.skip-button")
-    private WebElement skipButton;
+  @FindBy(css = "button.skip-button")
+  private WebElement skipButton;
 
-    public SecureYourAccountModal(WebDriver driver) {
-        super(driver);
-        PageFactory.initElements(driver, this);
-        super.findElement(authenticatorCard);
-    }
+  public SecureYourAccountModal(WebDriver driver) {
+    super(driver);
+    PageFactory.initElements(driver, this);
+    super.waitElement(authenticatorCard);
+  }
 
-    public static SecureYourAccountModal get(WebDriver driver) {
-        return new SecureYourAccountModal(driver);
-    }
+  public static SecureYourAccountModal get(WebDriver driver) {
+    return new SecureYourAccountModal(driver);
+  }
 
-    public void skip() {
-        skipButton.click();
-    }
+  public void skip() {
+    skipButton.click();
+  }
 }

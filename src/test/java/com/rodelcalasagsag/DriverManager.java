@@ -11,19 +11,20 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class DriverManager {
-    public static RemoteWebDriver createDriver() throws MalformedURLException {
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setPlatform(Platform.WINDOWS);
-        capabilities.setBrowserName("chrome");
-        RemoteWebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.setFileDetector(new LocalFileDetector());
-        driver.manage().window().maximize();
+  public static RemoteWebDriver createDriver() throws MalformedURLException {
+    DesiredCapabilities capabilities = new DesiredCapabilities();
+    capabilities.setPlatform(Platform.WINDOWS);
+    capabilities.setBrowserName("firefox");
+    RemoteWebDriver driver =
+        new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
+    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+    driver.setFileDetector(new LocalFileDetector());
+    driver.manage().window().maximize();
 
-        return driver;
-    }
+    return driver;
+  }
 
-    public static void quitDriver(WebDriver driver) {
-        driver.quit();
-    }
+  public static void quitDriver(WebDriver driver) {
+    driver.quit();
+  }
 }
