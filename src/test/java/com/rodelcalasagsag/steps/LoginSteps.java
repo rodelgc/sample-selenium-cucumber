@@ -1,6 +1,6 @@
 package com.rodelcalasagsag.steps;
 
-import com.rodelcalasagsag.config.Config;
+import com.rodelcalasagsag.Config;
 import com.rodelcalasagsag.pages.LoginPage;
 import com.rodelcalasagsag.pages.SecureYourAccountModal;
 import cucumber.api.java.en.Given;

@@ -1,6 +1,6 @@
 package com.rodelcalasagsag.pages;
 
-import com.rodelcalasagsag.config.Config;
+import com.rodelcalasagsag.Config;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

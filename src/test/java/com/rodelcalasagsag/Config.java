@@ -1,4 +1,4 @@
-package com.rodelcalasagsag.config;
+package com.rodelcalasagsag;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
