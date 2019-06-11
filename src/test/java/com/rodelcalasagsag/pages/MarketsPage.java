@@ -74,7 +74,7 @@ public class MarketsPage extends PageObject {
     for (int i = 0; i < maxTries && !menuIsOpen; i++) {
       dropDownButton.click();
       try {
-        menuIsOpen = super.waitElement(searchMenu).isDisplayed();
+        menuIsOpen = super.waitElement(searchMenu, 2).isDisplayed();
       } catch (Exception e) {
         if (i == maxTries - 1) {
           throw new Error("Menu didn't open after " + maxTries + " maximum tries");

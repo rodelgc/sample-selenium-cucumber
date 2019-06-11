@@ -9,19 +9,19 @@ import java.net.MalformedURLException;
 
 public class CommonHooks {
 
-    private World world;
+  private World world;
 
-    public CommonHooks(World world) {
-        this.world = world;
-    }
+  public CommonHooks(World world) {
+    this.world = world;
+  }
 
-    @Before
-    public void setupDriver() throws MalformedURLException {
-        world.driver = DriverManager.createDriver();
-    }
+  @Before
+  public void setupDriver() throws MalformedURLException {
+    world.driver = DriverManager.createDriver();
+  }
 
-    @After
-    public void tearDownDriver(Scenario scenario) {
-        DriverManager.quitDriver(world.driver);
-    }
+  @After
+  public void tearDownDriver(Scenario scenario) {
+    DriverManager.quitDriver(world.driver);
+  }
 }

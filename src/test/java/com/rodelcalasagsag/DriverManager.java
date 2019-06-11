@@ -1,5 +1,6 @@
 package com.rodelcalasagsag;
 
+import com.rodelcalasagsag.config.Config;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -8,16 +9,13 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.concurrent.TimeUnit;
 
 public class DriverManager {
   public static RemoteWebDriver createDriver() throws MalformedURLException {
     DesiredCapabilities capabilities = new DesiredCapabilities();
-    capabilities.setPlatform(Platform.WINDOWS);
-    capabilities.setBrowserName("firefox");
-    RemoteWebDriver driver =
-        new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
-    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+    capabilities.setPlatform(Platform.ANY);
+    capabilities.setBrowserName(Config.BROWSER_NAME);
+    RemoteWebDriver driver = new RemoteWebDriver(new URL(Config.HUB_URL), capabilities);
     driver.setFileDetector(new LocalFileDetector());
     driver.manage().window().maximize();
 
