@@ -32,16 +32,3 @@ sourceSets {
         }
     }
 }
-
-task startSeleniumHub(type: Exec) {
-    workingDir "$projectDir/selenium"
-    commandLine "sh", "start-hub.sh"
-}
-
-
-task startSeleniumNode(type: Exec) {
-    workingDir "$projectDir/selenium"
-    commandLine "sh", "start-node.sh"
-}
-
-startSeleniumNode.dependsOn startSeleniumHub
