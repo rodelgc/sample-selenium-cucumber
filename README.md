@@ -11,10 +11,10 @@ This test uses 2 Docker images:
 - Zalenium - contains a Selenium Grid that the tests will use
 - OpenJDK - for the JDK
 
-This tests are using the Cucumber/Gherkin style, and will be triggered by the Gradle wrapper inside the project.
+The tests are using Cucumber/Gherkin style, and will be triggered using the Gradle wrapper inside the project.
 
 ## Requirements
-1. This test can be run in any Windows or Linux (haven't tried on a Mac yet)
+1. This test can be run in any Windows/Mac/Linux host
 2. Host machine should have the following installed:
     - Git
     - Docker for Windows/Mac/Linux (not Docker Toolbox)
