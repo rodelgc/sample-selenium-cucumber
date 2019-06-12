@@ -1,9 +1,10 @@
 # README
 
 This is a Gradle project that contains Selenium WebDriver tests that can be run on Chrome or Firefox using Cucumber framework.
-To specify the browser you wish to run the tests on, open the [config.json](https://github.com/rodel-calasagsag/code-challenge-ui-automation-testing/blob/master/src/test/resources/com/rodelcalasagsag/config.json) file and set the `browserName` field to either `"chrome"` (default) or `"firefox"`.
+To specify the browser you wish to run the tests on, open the [config.json](https://github.com/rodel-calasagsag/code-challenge-ui-automation-testing/blob/master/src/test/resources/com/rodelcalasagsag/config.json) 
+file and set the `browserName` field to either `chrome` (default) or `firefox`.
 
-This project contains 3 tests that cover the following challenge steps:
+This project contains 3 tests that cover the following steps in the _"UI Automation Testing"_ Code Challenge:
 1. Select item from pulldown menu 
 2. Input text into a textbox
 3. Click button
