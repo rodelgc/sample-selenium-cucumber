@@ -7,7 +7,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -28,19 +27,6 @@ public class DriverManager {
 
   public static void quitDriver(WebDriver driver) {
     driver.quit();
-  }
-
-  public static void tearDownGrid() {
-    Runtime runtime = Runtime.getRuntime();
-    try {
-      // shutdown node
-      runtime.exec("curl -s http://localhost:4555/extra/LifecycleServlet?action=shutdown");
-
-      // shutdown hub
-      runtime.exec("curl -s http://localhost:4444/lifecycle-manager?action=shutdown");
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
   }
 
   public static void waitGridToBeReady() {
