@@ -1,5 +1,7 @@
 # README
 
+This is a Gradle project that contains Selenium WebDriver tests using Cucumber framework. 
+
 This project contains 3 tests that cover the following challenge steps:
 1. Select item from pulldown menu 
 2. Input text into a textbox
@@ -10,8 +12,6 @@ This project contains 3 tests that cover the following challenge steps:
 This test uses 2 Docker images:
 - Zalenium - contains a Selenium Grid that the tests will use
 - OpenJDK - for the JDK
-
-The tests are using Cucumber/Gherkin style, and will be triggered using the Gradle wrapper inside the project.
 
 ## Requirements
 1. This test can be run in any Windows/Mac/Linux host
@@ -41,14 +41,14 @@ The tests are using Cucumber/Gherkin style, and will be triggered using the Grad
     $ docker build -t my-tests .
     ```
 1. Launch `docker-run-zalenium.bat` if you're on Windows, or `docker-run-zalenium.sh` if you're on a Unix computer either by double-clicking it, or running it from a separate terminal. This will start a new Zalenium container which contains the Selenium Grid that the test will be using.
-1. On the same terminal, run the test
+1. Run the tests by using the Gradle wrapper inside the project
     ```
     $ docker run --rm --name my-tests-container --network="host" my-tests ./gradlew clean test --info
     ```
 1. Open up any browser, and go to http://localhost:4444/grid/admin/live?refresh=20 to see a live preview of the running tests inside the Zalenium container
 1. You can also access the Selenium Grid Console when you go to http://localhost:4444/grid/console
 1. To view the recordings and logs of the tests, go to http://localhost:4444/dashboard/
-1. When the tests are done, the `my-tests-container` will automatically stop. To stop the Zalenium container, you need to run
+1. When the tests are done, the OpenJDK container (named `my-tests-container`) will automatically stop. To stop the Zalenium container, you need to run
     ```
     $ docker stop zalenium
     ```
