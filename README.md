@@ -1,5 +1,7 @@
 # README
 
+This repo contains my sample Selenium tests written in Java. It also showcases my knowledge on Selenium Grid, Cucumber, and Docker.  
+
 This is a Gradle project that contains Selenium WebDriver tests that can be run on Chrome or Firefox using Cucumber framework.
 To specify the browser you wish to run the tests on, open the [config.json](https://github.com/rodel-calasagsag/code-challenge-ui-automation-testing/blob/master/src/test/resources/com/rodelcalasagsag/config.json) 
 file and set the `browserName` field to either `chrome` (default) or `firefox`.
